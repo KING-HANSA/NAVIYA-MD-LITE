@@ -29,7 +29,7 @@ const filer = File.fromURL(`https://mega.nz/file/${sessdata}`)
 filer.download((err, data) => {
 if(err) throw err
 fs.writeFile(__dirname + '/auth_info_baileys/creds.json', data, () => {
-console.log("DEW-MD-LITE Session downloaded 🍁")
+console.log("NAVIYA-MD-LITE Session downloaded 🍁")
 })})}
 
 const express = require("express");
@@ -47,7 +47,7 @@ const {readEnv} = require('./lib/database')
 const config = await readEnv();
 const prefix = config.PREFIX
 //==============================================
-console.log("DEW-MD-LITE Connecting 🚀...");
+console.log("NAVIYA-MD-LITE Connecting 🚀...");
 const { state, saveCreds } = await useMultiFileAuthState(__dirname + '/auth_info_baileys/')
 var { version } = await fetchLatestBaileysVersion()
 
@@ -67,38 +67,22 @@ if (lastDisconnect.error.output.statusCode !== DisconnectReason.loggedOut) {
 connectToWA()
 }
 } else if (connection === 'open') {
-console.log('DEW-MD-LITE Is Installing ⚙️... ')
+console.log('NAVIYA-MD-LITE Is Installing ⚙️... ')
 const path = require('path');
 fs.readdirSync("./plugins/").forEach((plugin) => {
 if (path.extname(plugin).toLowerCase() == ".js") {
 require("./plugins/" + plugin);
 }
 });
-console.log('DEW-MD-LITE Plugins installed successful 🔌')
-console.log('DEW-MD-LITE connected to whatsapp 🪀')
+console.log('NAVIYA-MD-LITE Plugins installed successful 🔌')
+console.log('NAVIYA-MD-LITE connected to whatsapp 🪀')
 
 let up = `*╭──────────────●●►*
-> *DEW-MD CONNECTED SUCCSESSFULY Type .Menu To Get Command*
-
-> *Join Our Whatsapp Channel For Updates With DEW-MD*
-
-*https://whatsapp.com/channel/0029Varwcfc7YSd60AulNF2h*
-
-> *Follow Us On Instagram*
-
-*https://Instagram.com/hansa_dewmina_lk*
-
-*╭⊱✫ DEW MD ✫⊱╮*
-*│✫➠ - 📂REPOSITORY NAME:* *DEW MD*
-*│✫➠ - 📃DESCRIPTION:* *SRI LANKAN AI BOT*
-*│✫➠ - 🛡️OWNER:* *Hansa Dewmina*
-*│✫➠ - 🌐URL:* *https://github.com/KING-HANSA/DEW-MD-LITE*
-
-*YOUR BOT ACTIVE NOW ENJOY♥️🪄*\n\n*PREFIX: ${prefix}*
-
+> *NAVIYA-MD CONNECTED SUCCSESSFULY*
+> *උබේ බොටා කනෙක්ට් උනා බන්*
 *╰──────────────●●►*`;
 
-conn.sendMessage(config.BOT_NUMBER + "@s.whatsapp.net", { image: { url: `https://i.ibb.co/hgf2p9M/repository-open-graph-templatefdf.png` }, caption: up })
+conn.sendMessage(config.BOT_NUMBER + "@s.whatsapp.net", { image: { url: `https://qu.ax/HjDXH.jpg` }, caption: up })
 
 }
 })
@@ -172,7 +156,7 @@ if(!isOwner && !isGroup && config.MODE === "groups") return
 
 if (config.AUTO_REACT === 'true') { 
   if (isReact) return;
-  const emojis = ["💗", "🔥", "✨", "💯", "♠️", "🪄", "🔗", "🫧", "🪷", "🦠", "🌺", "🐬", "🦋", "🍁", "🌿", "🍦", "🌏", "✈️", "❄️", "🎉", "🎊"];
+  const emojis = ["💗", "🔥", "✨", "💯", "♠️", "🪄", "🔗", "🫧", "🪷", "🦠", "🌺", "🐬", "🍁", "🌿", "🍦", "🌏", "✈️", "❄️", "🎉", "🖕"];
     
   emojis.forEach(emoji => {
   m.react(emoji);
@@ -223,7 +207,7 @@ command.function(conn, mek, m,{from, l, quoted, body, isCmd, command, args, q, i
 })
 }
 app.get("/", (req, res) => {
-res.send("|| 🍁 DEW-MD-LITE___________POWERD BY HANSA DEWMINA 🍁 ||");
+res.send("|| 🍁 NAVIYA-MD-LITE___________POWERD BY HANSA DEWMINA 🍁 ||");
 });
 app.listen(port, () => console.log(`Server listening on port http://localhost:${port}`));
 setTimeout(() => {
