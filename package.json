@@ -1,12 +1,12 @@
 {
-  "name": "DEW-MD",
+  "name": "NAVIYA-MD",
   "version": "1.0.0",
   "description": "A Simple WhatsApp bot created By Hansa-Dewmina",
   "main": "index.js",
   "scripts": {
-    "start": "pm2 start index.js --deep-monitoring --attach --name DEW-MD",
-    "stop": "pm2 stop DEW-MD",
-    "restart": "pm2 restart DEW-MD"
+    "start": "pm2 start index.js --deep-monitoring --attach --name NAVIYA-MD",
+    "stop": "pm2 stop NAVIYA-MD",
+    "restart": "pm2 restart NAVIYA-MD"
   },
   "dependencies": {
     "@whiskeysockets/baileys": "6.6.0",
